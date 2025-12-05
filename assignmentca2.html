@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Pricing Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', 'Courier', monospace;
+            background-color: #f5f5f5;
+            padding: 50px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pricing-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pricing-card {
+            background-color: #e0e0e0;
+            padding: 40px 30px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 15px;
+        }
+
+        .checkmark {
+            color: white;
+            background-color: #00aa00;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .crossmark {
+            color: white;
+            background-color: #cc0000;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        .sign-up-btn {
+            background-color: #cc3333;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sign-up-btn:hover {
+            background-color: #aa2222;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pricing-container">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+            <div class="plan-name">Basic</div>
+            <div class="price">$11.99/month</div>
+            <ul class="features">
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>10GB Storage</span>
+                </li>
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>1 User</span>
+                </li>
+                <li class="feature-item">
+                    <span class="wrong">🚫</span>
+                    <span>Support</span>
+                </li>
+            </ul>
+            <button class="sign-up-btn">Sign Up</button>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="pricing-card">
+            <div class="plan-name">Standard</div>
+            <div class="price">$19.99/month</div>
+            <ul class="features">
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>50GB Storage</span>
+                </li>
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>5 Users</span>
+                </li>
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>Phone & Email Support</span>
+                </li>
+            </ul>
+            <button class="sign-up-btn">Sign Up</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-card">
+            <div class="plan-name">Premium</div>
+            <div class="price">$49.99/month</div>
+            <ul class="features">
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>100GB Storage</span>
+                </li>
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>10 Users</span>
+                </li>
+                <li class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span>24/7 Support</span>
+                </li>
+            </ul>
+            <button class="sign-up-btn">Sign Up</button>
+        </div>
+    </div>
+</body>
+
+</html>
